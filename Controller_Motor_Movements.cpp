@@ -40,113 +40,94 @@ void loop() {
   // put your main code here, to run repeatedly
 
   //Right D-Pad button Code+
-  if (digitalRead(Right_D_Pad) == LOW) {
+  while (digitalRead(Right_D_Pad) == LOW) {
     digitalWrite(dirPinR, LOW);
     digitalWrite(dirPinL, HIGH);
-
     // While holding down the right D Pad button, the left motor will spin clockwise and the right motor will spin counter clockwise moving the array right
-    for (int i = 1; digitalRead(Right_D_Pad) < i; i) {
-      // The lines of code below are responsible for the movement of the left and right motors
-      digitalWrite(stepPinR, HIGH);
-      delayMicroseconds(200);
-      digitalWrite(stepPinR, LOW); 
-      delayMicroseconds(200);
-      digitalWrite(stepPinL, HIGH);
-      delayMicroseconds(200);
-      digitalWrite(stepPinL, LOW); 
-      delayMicroseconds(200);
-    }
-
-  delay(1);
+    // The lines of code below are responsible for the movement of the left and right motors
+    digitalWrite(stepPinR, HIGH);
+    delayMicroseconds(200);
+    digitalWrite(stepPinR, LOW); 
+    delayMicroseconds(200);
+    digitalWrite(stepPinL, HIGH);
+    delayMicroseconds(200);
+    digitalWrite(stepPinL, LOW); 
+    delayMicroseconds(200);
   }
+delay(1);
 
   // Up D-Pad button Code
-  if (digitalRead(Up_D_Pad) == LOW) {
+  while (digitalRead(Up_D_Pad) == LOW) {
     digitalWrite(dirPinM, LOW);
-    
     // While holding down the up D Pad button the middle motor will spin counter clockwise
-    for (int i = 1; digitalRead(Up_D_Pad) < i; i) {
-      // The lines of code below are responsible for moving the middle motor
-      digitalWrite(stepPinM, HIGH);
-      delayMicroseconds(500);
-      digitalWrite(stepPinM, LOW); 
-      delayMicroseconds(500);
-    }
-  delay(1);
+    // The lines of code below are responsible for moving the middle motor
+    digitalWrite(stepPinM, HIGH);
+    delayMicroseconds(500);
+    digitalWrite(stepPinM, LOW); 
+    delayMicroseconds(500);
   }
+delay(1);
 
   // Down D-Pad button Code
-  if (digitalRead(Down_D_Pad) == LOW) {
+  while (digitalRead(Down_D_Pad) == LOW) {
     digitalWrite(dirPinM, HIGH);
-    
     // While holding down the down D-Pad button the middle motor will spin clock wise
-    for (int i = 1; digitalRead(Down_D_Pad) < i; i) {
-      // The lines of code below are responsible for moving the middle motor
-      digitalWrite(stepPinM, HIGH);
-      delayMicroseconds(500);
-      digitalWrite(stepPinM, LOW); 
-      delayMicroseconds(500);
-    }
-  delay(1);
+    // The lines of code below are responsible for moving the middle motor
+    digitalWrite(stepPinM, HIGH);
+    delayMicroseconds(500);
+    digitalWrite(stepPinM, LOW); 
+    delayMicroseconds(500);
   }
+delay(1);
 
   // Left D-Pad button Code
-  if (digitalRead(Left_D_Pad) == LOW) {
+  while (digitalRead(Left_D_Pad) == LOW) {
     digitalWrite(dirPinL, LOW);
     digitalWrite(dirPinR, HIGH);
-
     // While holding down the left D-Pad button the right motor will spin clockwise while the left motor spins counter clockwise, moving the array left
-    for (int i = 1; digitalRead(Left_D_Pad) < i; i) {
-      // The lines of code below are responsible for moving the left and right motors
-      digitalWrite(stepPinL, HIGH);
-      delayMicroseconds(200);
-      digitalWrite(stepPinL, LOW); 
-      delayMicroseconds(200);
-      digitalWrite(stepPinR, HIGH);
-      delayMicroseconds(200);
-      digitalWrite(stepPinR, LOW); 
-      delayMicroseconds(200);
-    }
-  delay(1);
+    // The lines of code below are responsible for moving the left and right motors
+    digitalWrite(stepPinL, HIGH);
+    delayMicroseconds(200);
+    digitalWrite(stepPinL, LOW); 
+    delayMicroseconds(200);
+    digitalWrite(stepPinR, HIGH);
+    delayMicroseconds(200);
+    digitalWrite(stepPinR, LOW); 
+    delayMicroseconds(200);
   }
+delay(1);
 
   // Up button Code
-  if (digitalRead(Up_Button) == LOW) {
+  while (digitalRead(Up_Button) == LOW) {
     digitalWrite(dirPinL, LOW);
-    digitalWrite(dirPinR, LOW);
-    
+    digitalWrite(dirPinR, LOW); 
     // While holding down the up button the left and right motors will both move counter clockwise, raising the system
-    for (int i = 1; digitalRead(Up_Button) < i; i) {
-      // The lines of code below are responsible for moving the left and right motors
-      digitalWrite(stepPinR, HIGH);
-      delayMicroseconds(200);
-      digitalWrite(stepPinR, LOW); 
-      delayMicroseconds(200);
-      digitalWrite(stepPinL, HIGH);
-      delayMicroseconds(200);
-      digitalWrite(stepPinL, LOW); 
-      delayMicroseconds(200);
-    }
-  delay(1);
+    // The lines of code below are responsible for moving the left and right motors
+    digitalWrite(stepPinR, HIGH);
+    delayMicroseconds(200);
+    digitalWrite(stepPinR, LOW); 
+    delayMicroseconds(200);
+    digitalWrite(stepPinL, HIGH);
+    delayMicroseconds(200);
+    digitalWrite(stepPinL, LOW); 
+    delayMicroseconds(200);
   }
+delay(1);
 
   // Down button Code
-  if (digitalRead(Down_Button) == LOW) {
+  while (digitalRead(Down_Button) == LOW) {
     digitalWrite(dirPinR, HIGH);
     digitalWrite(dirPinL, HIGH);
-  
     // While holding down the down button, the left and right motors will move clockwise
-    for (int i = 1; digitalRead(Down_Button) < i; i) {
-      // The lines of code below are responsible for moving the left and right motors
-      digitalWrite(stepPinR, HIGH);
-      delayMicroseconds(200);
-      digitalWrite(stepPinR, LOW); 
-      delayMicroseconds(200);
-      digitalWrite(stepPinL, HIGH);
-      delayMicroseconds(200);
-      digitalWrite(stepPinL, LOW); 
-      delayMicroseconds(200);
-    }
-  delay(1);
+    // The lines of code below are responsible for moving the left and right motors
+    digitalWrite(stepPinR, HIGH);
+    delayMicroseconds(200);
+    digitalWrite(stepPinR, LOW); 
+    delayMicroseconds(200);
+    digitalWrite(stepPinL, HIGH);
+    delayMicroseconds(200);
+    digitalWrite(stepPinL, LOW); 
+    delayMicroseconds(200);
   }
+delay(1);
 }
